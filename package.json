@@ -1,0 +1,24 @@
+{
+  "name": "gen-ai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=dev concurrently \"npm run server:dev\" \"npm run client\"",
+    "install-all": "npm install --prefix gen-ai-client && npm install --prefix gen-ai-server",
+    "server:dev": "npm --prefix ./gen-ai-server run start:dev",
+    "server": "NODE_ENV=prod npm --prefix ./gen-ai-server run start",
+    "client": "npm --prefix ./gen-ai-client run dev",
+    "prod": "NODE_ENV=prod npm run server",
+    "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
+    "build:server": "npm --prefix ./gen-ai-server run build",
+    "build:client": "npm --prefix ./gen-ai-client run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.3.3"
+  }
+}

@@ -1,0 +1,8 @@
+{
+    "common_collections": [
+        "users",
+        "azure_tenant",
+        "var_environment",
+        "notifications"
+    ]
+}
